@@ -13,9 +13,9 @@ import com.isayevapps.cleanarchitectureexample.domain.usecases.SaveUserNameUseCa
 
 class MainActivity : AppCompatActivity() {
 
-    private val userRepository = UserRepositoryImpl(applicationContext)
-    private val saveUserNameUseCase = SaveUserNameUseCase(userRepository)
-    private val getUserNameUseCase = GetUserNameUseCase(userRepository)
+    private val userRepository by lazy { UserRepositoryImpl(applicationContext) }
+    private val saveUserNameUseCase by lazy { SaveUserNameUseCase(userRepository) }
+    private val getUserNameUseCase by lazy { GetUserNameUseCase(userRepository) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
