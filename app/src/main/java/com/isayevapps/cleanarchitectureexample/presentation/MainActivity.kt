@@ -7,15 +7,24 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.isayevapps.cleanarchitectureexample.R
 import com.isayevapps.cleanarchitectureexample.data.repository.UserRepositoryImpl
-import com.isayevapps.cleanarchitectureexample.domain.models.SaveUserNameParam
+import com.isayevapps.cleanarchitectureexample.data.storage.SharedPrefUserStorage
 import com.isayevapps.cleanarchitectureexample.domain.usecases.GetUserNameUseCase
 import com.isayevapps.cleanarchitectureexample.domain.usecases.SaveUserNameUseCase
+import com.isayevapps.cleanarchitectureexample.domain.models.SaveUserNameParam
 
 class MainActivity : AppCompatActivity() {
 
-    private val userRepository by lazy { UserRepositoryImpl(applicationContext) }
-    private val saveUserNameUseCase by lazy { SaveUserNameUseCase(userRepository) }
-    private val getUserNameUseCase by lazy { GetUserNameUseCase(userRepository) }
+    private val userRepository by lazy { UserRepositoryImpl(SharedPrefUserStorage(applicationContext)) }
+    private val saveUserNameUseCase by lazy {
+        SaveUserNameUseCase(
+            userRepository
+        )
+    }
+    private val getUserNameUseCase by lazy {
+        GetUserNameUseCase(
+            userRepository
+        )
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
