@@ -9,7 +9,7 @@ private const val KEY_LAST_NAME = "keyLastName"
 private const val DEFAULT_LAST_NAME = "Default last name"
 private const val DEFAULT_FIRST_NAME = "Default first name"
 
-class SharedPrefUserStorage(context: Context) : UserStorage {
+class SharedPrefUserStorage  (context: Context) : UserStorage {
 
     private val sharedPreferences =
         context.getSharedPreferences(SHARED_PREFS_NAME, Context.MODE_PRIVATE)
