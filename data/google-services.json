@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "84891686554",
+    "firebase_url": "https://simpledatabase-cf2b4-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "simpledatabase-cf2b4",
+    "storage_bucket": "simpledatabase-cf2b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:84891686554:android:755478397808c42e52f123",
+        "android_client_info": {
+          "package_name": "com.isayevapps.data"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "84891686554-arl50aja6ichm07v9ga4g73d6obpitl1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiuGf6FeZsFmj-sh0Rt6--YYgkQPfUoxA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "84891686554-arl50aja6ichm07v9ga4g73d6obpitl1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

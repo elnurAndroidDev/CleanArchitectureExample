@@ -1,8 +1,8 @@
-package com.isayevapps.cleanarchitectureexample.data.storage
+package com.isayevapps.cleanarchitectureexample.data.storage.sharedprefs
 
 import com.isayevapps.cleanarchitectureexample.data.storage.models.User
 
-interface UserStorage {
+interface SharedPrefStorage {
 
     fun save(user: User): Boolean
 
